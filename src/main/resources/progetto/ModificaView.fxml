@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progetto.controller.ModificaController">
+   <children>
+      <TextField fx:id="textFieldNome" layoutX="14.0" layoutY="96.0" promptText="Nome" />
+      <TextField fx:id="textFieldCognome" layoutX="14.0" layoutY="149.0" promptText="Cognome" />
+      <TextField fx:id="textFieldEta" layoutX="14.0" layoutY="200.0" promptText="Età" />
+      <TextField fx:id="textFieldCodiceFiscale" layoutX="14.0" layoutY="253.0" promptText="Codice Fiscale" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="70.0" prefWidth="560.0" text="MODIFICA">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonModifica" layoutX="410.0" layoutY="327.0" mnemonicParsing="false" onAction="#modifica" text="Modifica" />
+      <Button layoutX="516.0" layoutY="327.0" mnemonicParsing="false" onAction="#backToMain" text="Indietro" />
+      <TextField fx:id="textFieldMotivo" layoutX="14.0" layoutY="302.0" promptText="Motivo" />
+      <DatePicker fx:id="datePickerData" layoutX="2.0" layoutY="349.0" promptText="Data" />
+      <Label fx:id="labelNome" layoutX="206.0" layoutY="100.0" prefHeight="18.0" prefWidth="160.0" text="Il nome non contiene numeri" textFill="RED" visible="false" />
+      <Label fx:id="labelCognome" layoutX="201.0" layoutY="152.0" prefHeight="18.0" prefWidth="175.0" text="Il cognome non contiene numeri" textFill="RED" visible="false" />
+      <Label fx:id="labelCodiceFiscale" layoutX="201.0" layoutY="256.0" prefHeight="18.0" prefWidth="175.0" text="Il C.F deve essere di 16 caratteri" textFill="RED" visible="false" />
+      <Label fx:id="labelMotivo" layoutX="201.0" layoutY="305.0" prefHeight="18.0" prefWidth="160.0" text="Inserisci il motivo della visita" textFill="RED" visible="false" />
+      <Label fx:id="labelEsistente" layoutX="380.0" layoutY="293.0" prefHeight="18.0" prefWidth="122.0" text="Paziente già esistente" textFill="RED" visible="false" />
+      <Label fx:id="labelData" layoutX="201.0" layoutY="353.0" text="Inserisci la data di riceovero" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

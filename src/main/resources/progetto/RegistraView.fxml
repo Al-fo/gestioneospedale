@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progetto.controller.RegistraController">
+   <children>
+      <TextField fx:id="textFieldNome" layoutX="14.0" layoutY="96.0" promptText="Nome" />
+      <TextField fx:id="textFieldCognome" layoutX="14.0" layoutY="149.0" promptText="Cognome" />
+      <TextField fx:id="textFieldEta" layoutX="14.0" layoutY="200.0" promptText="Età" />
+      <TextField fx:id="textFieldCodiceFiscale" layoutX="14.0" layoutY="253.0" promptText="Codice Fiscale" />
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="70.0" prefWidth="560.0" text="REGISTRA">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelErroreNome" layoutX="206.0" layoutY="96.0" prefHeight="25.0" prefWidth="149.0" textFill="RED" visible="false" />
+      <Label fx:id="labelErroreCognome" layoutX="206.0" layoutY="149.0" prefHeight="25.0" prefWidth="149.0" textFill="RED" visible="false" />
+      <Label fx:id="labelErroreEta" layoutX="206.0" layoutY="200.0" prefHeight="25.0" prefWidth="149.0" textFill="RED" visible="false" />
+      <Label fx:id="labelErroreCodiceFiscale" layoutX="206.0" layoutY="253.0" prefHeight="25.0" prefWidth="160.0" textFill="RED" visible="false" />
+      <Label fx:id="labelErroreDipendente" layoutX="132.0" layoutY="327.0" prefHeight="25.0" prefWidth="149.0" textFill="RED" />
+      <Button fx:id="buttonRegistra" layoutX="422.0" layoutY="301.0" mnemonicParsing="false" onAction="#registra" text="Registra" />
+      <Button layoutX="516.0" layoutY="301.0" mnemonicParsing="false" onAction="#backToMain" text="Indietro" />
+      <DatePicker fx:id="datePickerData" layoutX="1.0" layoutY="353.0" promptText="Data" />
+      <TextField fx:id="textFieldMotivo" layoutX="14.0" layoutY="301.0" promptText="Motivo" />
+      <Label fx:id="labelNome" layoutX="193.0" layoutY="100.0" prefHeight="18.0" prefWidth="160.0" text="Il nome non contiene numeri" textFill="RED" visible="false" />
+      <Label fx:id="labelCognome" layoutX="193.0" layoutY="152.0" prefHeight="18.0" prefWidth="175.0" text="Il cognome non contiene numeri" textFill="RED" visible="false" />
+      <Label fx:id="labelCodiceFiscale" layoutX="193.0" layoutY="256.0" prefHeight="18.0" prefWidth="160.0" text="Il C.F deve essere 16 caratteri" textFill="RED" visible="false" />
+      <Label fx:id="labelMotivo" layoutX="193.0" layoutY="304.0" prefHeight="18.0" prefWidth="160.0" text="Inserisci il motivo della visita" textFill="RED" visible="false" />
+      <Label fx:id="labelEsistente" layoutX="392.0" layoutY="265.0" prefHeight="18.0" prefWidth="119.0" text="Paziente già esistente" textFill="RED" visible="false" />
+      <Label fx:id="labelData" layoutX="207.0" layoutY="357.0" prefHeight="18.0" prefWidth="160.0" text="Inserisci una data di ricovero" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

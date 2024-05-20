@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="progetto.controller.MainController">
+   <children>
+      <Button fx:id="buttonRegistra" layoutX="146.0" layoutY="106.0" mnemonicParsing="false" onAction="#switchToRegistra" prefHeight="34.0" prefWidth="74.0" text="Registra" />
+      <Button fx:id="buttonModifica" disable="true" layoutX="146.0" layoutY="183.0" mnemonicParsing="false" onAction="#switchToModifica" prefHeight="34.0" prefWidth="74.0" text="Modifica" />
+      <Button fx:id="buttonRimuovi" disable="true" layoutX="145.0" layoutY="274.0" mnemonicParsing="false" onAction="#rimuovi" prefHeight="34.0" prefWidth="74.0" text="Rimuovi" />
+      <Label fx:id="labelErroreModifica" layoutX="445.0" layoutY="217.0" prefHeight="23.0" prefWidth="146.0" textFill="RED" visible="false" />
+      <Label fx:id="labelErroreRimuovi" layoutX="445.0" layoutY="321.0" prefHeight="23.0" prefWidth="146.0" textFill="RED" visible="false" />
+      <ListView fx:id="listaPazienti" onMouseClicked="#visualizza" prefHeight="400.0" prefWidth="146.0" />
+      <TableView fx:id="listaVisualizzaPaziente" layoutX="146.0" prefHeight="106.0" prefWidth="454.0">
+        <columns>
+            <TableColumn fx:id="colonnaData" prefWidth="69.5999755859375" text="Data" />
+          <TableColumn fx:id="colonnaNome" prefWidth="68.0" text="Nome" />
+          <TableColumn fx:id="colonnaCognome" prefWidth="76.0" text="Cognome" />
+            <TableColumn fx:id="colonnaCodiceFiscale" prefWidth="92.800048828125" text="Codice fiscale" />
+            <TableColumn fx:id="colonnaMotivo" prefWidth="147.199951171875" text="Motivo" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
